@@ -1,0 +1,32 @@
+// button style
+// display flex
+@mixin flexRow($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flexCol($justify, $align) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// color
+$white: #ffff;
+$nav-bg: #000000;
+$search-bg: #363636;
+$purple: #7d597d;
+$blue: #4e699c;
+$dark-green: #364a48;
+$footer-bg: #222222;
+$light-pink: #f8e6e2;
+$cyan: #8ee6ec;
+$dark-blue: #6593A6;
+$hot-pink: #F2134F;
+$gray:#FAFAFA;
+$gray-text: rgb(137, 137, 137);
+// font family
+$openSan: 'Open Sans', sans-serif;
+$muli: 'Mulish', sans-serif;

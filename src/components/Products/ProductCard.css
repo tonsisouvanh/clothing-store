@@ -1,0 +1,104 @@
+.card {
+  width: 14rem;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .link {
+  text-decoration: none;
+  font-family: "Mulish", sans-serif;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #222222;
+}
+
+.card .link:hover {
+  color: #6593A6;
+}
+
+.card .link .title {
+  margin: 0.7rem 0 0.2rem 0;
+}
+
+.card .price-wrapper {
+  font-family: "Open Sans", sans-serif;
+}
+
+.card .price-wrapper .sale {
+  font-size: 1.1rem;
+  text-decoration: line-through;
+  color: #acacac;
+  margin-right: 1em;
+}
+
+.card .price-wrapper .price {
+  font-size: 1.3rem;
+  color: #af0000;
+}
+
+.card .image-stack {
+  cursor: pointer;
+}
+
+.card .image-stack img {
+  width: 100%;
+  height: auto;
+}
+
+.card .image-stack .hover-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.card .image-stack .hover-img {
+  visibility: hidden;
+}
+
+.card .image-stack .action {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .image-stack .action .fas {
+  font-size: 1.3rem;
+  color: #6f6f6f;
+  margin: 0.5rem 0.5rem 0.2rem 0;
+}
+
+.card .image-stack .action {
+  visibility: hidden;
+}
+
+.card .image-stack:hover .hover-img-active {
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  visibility: visible;
+}
+
+.card .image-stack:hover .action {
+  visibility: visible;
+}
+/*# sourceMappingURL=ProductCard.css.map */

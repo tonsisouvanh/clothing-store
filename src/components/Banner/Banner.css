@@ -1,0 +1,177 @@
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.slider .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider #right-arrow {
+  position: absolute;
+  font-size: 2rem;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+  top: 50%;
+  right: 20px;
+}
+
+.slider #right-arrow:hover {
+  color: black;
+}
+
+.slider #left-arrow {
+  position: absolute;
+  font-size: 2rem;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+  top: 50%;
+  left: 20px;
+}
+
+.slider #left-arrow:hover {
+  color: black;
+}
+
+.slider .slide {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  -webkit-transition-duration: 1s ease;
+          transition-duration: 1s ease;
+}
+
+.slider .slide .text {
+  position: absolute;
+  z-index: 1;
+  color: #222222;
+  top: 189px;
+  right: 158px;
+  width: 30%;
+  font-family: "Open Sans", sans-serif;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.slider .slide .text p {
+  font-size: 25px;
+}
+
+.slider .slide .text h1 {
+  font-size: 35px;
+  margin: 2rem 0;
+}
+
+.slider .slide .text button {
+  background-color: transparent;
+  border: 2px solid black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  width: 12rem;
+  padding: 10px;
+  margin-right: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.slider .slide .text button:hover {
+  background-color: #222222;
+  color: #ffff;
+}
+
+.slider .slide #text {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slider .slide .title {
+  font-size: 48px;
+}
+
+.slider .active {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 1495px) {
+  .slider .slide .text button {
+    font-size: 20px;
+    width: 10rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1495px) and (max-width: 1208px) {
+  .slider .slide .text p {
+    font-size: 15px;
+  }
+  .slider .slide .text h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .slider {
+    height: 35vh;
+  }
+  .slider #left-arrow {
+    font-size: 20px;
+  }
+  .slider #right-arrow {
+    font-size: 20px;
+  }
+  .slider .slide .text {
+    width: 180px;
+    top: 2rem;
+    right: 0;
+  }
+  .slider .slide .text p {
+    font-size: 1em;
+  }
+  .slider .slide .text h1 {
+    font-size: 1em;
+    margin: 1rem 0;
+  }
+  .slider .slide .text button {
+    font-size: 0.7em;
+    width: 6rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=Banner.css.map */

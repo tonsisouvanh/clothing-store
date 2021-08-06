@@ -1,0 +1,108 @@
+@import "../../styles/variable";
+.container {
+  // @include flexCol(start, center);
+  // display: flex;
+  // flex-direction: column;
+  overflow: hidden;
+  padding: 3rem 4rem;
+
+  .best-seller{
+    text-align: center;
+  }
+  p {
+    font-family: $openSan;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    font-family: $muli;
+    font-size: 2.1rem;
+  }
+  .card-container {
+    display: grid;
+    justify-items: center;
+    // width: 100%;
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 3rem;
+    margin-top: 2.6rem;
+    .card {
+      position: relative;
+      overflow: hidden;
+      .title {
+        font-family: $muli;
+        margin: 0.7rem 0 0.2rem 0;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+          color: $dark-blue;
+        }
+      }
+      .price-wrapper {
+        font-family: $openSan;
+        .sale {
+          font-size: 1.1rem;
+          text-decoration: line-through;
+          color: rgb(172, 172, 172);
+          margin-right: 1em;
+        }
+        .price {
+          font-size: 1.3rem;
+          color: rgb(175, 0, 0);
+        }
+      }
+      .image-stack {
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        .hover-img {
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          opacity: 0;
+          transform: translate(100%);
+          transition: all 0.5s ease-in-out;
+        }
+        .hover-img {
+          visibility: hidden;
+        }
+        .action {
+          position: absolute;
+          right: 0;
+          top: 0;
+          @include flexCol(center, center);
+          .fas {
+            font-size: 1.3rem;
+            color: rgb(111, 111, 111);
+            margin: 0.5rem 0.5rem 0.2rem 0;
+          }
+        }
+        .action {
+          visibility: hidden;
+        }
+
+        &:hover {
+          .hover-img-active {
+            opacity: 1;
+            transform: translate(0);
+
+            visibility: visible;
+          }
+          .action {
+            // @include flexCol(center, center);
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+  // @media screen and (max-width: 1085px) {
+  //   .card-container {
+  //     display: grid;
+  //     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  //   }
+  // }
+}

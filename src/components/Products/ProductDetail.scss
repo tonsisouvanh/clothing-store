@@ -1,0 +1,138 @@
+@import "../../styles/variable";
+
+.product-detail {
+  .pagination {
+    background-color: $gray;
+    @include flexCol(center, center);
+    width: 100%;
+    height: 30vh;
+    h1 {
+      font-family: $muli;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    span {
+      font-family: $openSan;
+      .link {
+        text-decoration: none;
+        color: #222222;
+      }
+    }
+    .span {
+      margin: 0 1rem;
+    }
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 5rem 9rem;
+    font-family: $openSan;
+
+    .product-img {
+      @include flexCol(start,center);
+      .main-img {
+        width: 35rem;
+        height: auto;
+      }
+      .mini-img {
+        @include flexRow(center, center);
+        img {
+          width: 6rem;
+          height: auto;
+          padding: 1rem 0 0 0;
+        }
+      }
+    }
+
+    .product-info {
+      .title {
+        margin-bottom: 1rem;
+        h1 {
+          font-family: $muli;
+          margin-bottom: 1rem;
+        }
+        .rating {
+          .stars {
+            font-size: 1.4rem;
+            color: #ffc50d;
+            @include flexRow(start, center);
+            list-style: none;
+            margin-bottom: 2rem;
+            li {
+              text-decoration: none;
+            }
+          }
+        }
+        p {
+          color: $gray-text;
+        }
+      }
+      .properties {
+        ul {
+          width: 24rem;
+          list-style: none;
+          li {
+            @include flexRow(space-between, center);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            .prop-name {
+              font-weight: 600;
+              color: rgb(77, 77, 77);
+            }
+            .sale {
+              color: rgb(170, 1, 1);
+              text-decoration: line-through;
+              margin-right: 0.3rem;
+            }
+            .price {
+              color: rgb(134, 93, 134);
+              font-size: 1.3rem;
+            }
+            div {
+              p {
+                color: $gray-text;
+              }
+            }
+            .size-wrapper {
+              @include flexRow(center, center);
+              .size {
+                color: $gray-text;
+                width: 2rem;
+                border: 2px solid gray;
+                text-align: center;
+                margin-left: 0.3rem;
+              }
+            }
+          }
+        }
+      }
+      .buttons-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        button {
+          height: 3.2rem;
+          border: none;
+          padding: 0.8rem 0;
+          font-family: $muli;
+          font-size: 1.5rem;
+          background-color: $light-pink;
+          font-size: 1.1rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.2s ease-out;
+          &:last-child{
+            grid-column: 1/3;
+          }
+          &:hover{
+            background-color: $footer-bg;
+            color: $white;
+          }
+          
+        }
+      }
+    }
+  }
+}
